@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class DocumentsPage {
@@ -16,6 +17,8 @@ public class DocumentsPage {
     public DocumentsPage (WebDriver driver){
         this.driver = driver;
     }
+
+    public List<String> expectedFreeDocs = Arrays.asList("Exchange a Waiver", "Send a Payment Document");
 
     //Locators
     private By freeDocuments = By.xpath("//span[contains(.,'Free')]//ancestor::div[contains(@class,'panel-heading')]//div[@class='left']");
